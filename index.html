@@ -1,38 +1,38 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>俄罗斯方块 - HTML5版</title>
-    <style>
+<!DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>
+<   < css长= " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN" >html lang="zh-CN">
+<   < head   头   头   头   头   头   头   头   头   头   头   头>head>
+       <   元   元meta   元   元   元 charset   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集="UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"><   元   元meta   元   元 charset   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集="UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8">   "UTF-8"   "UTF-8"
+    <   元   元meta   元   元 name   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字="viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <   标题   标题   标题   标题title   标题>俄罗斯方块 - HTML5版</   & lt;title>
+       < style   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格><style   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格>
         /* 基础重置和全局样式 */
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
+               保证金:0;margin   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金: 0;
+               填充:0;padding   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充: 0;
+               盒模型尺寸计算方式：内容、内边距和边框的总和决定元素的尺寸box-sizing: border-box;
+            -webkit-tap-highlight-color-webkit-tap-highlights-color（注：此为-webkit-tap-highlights-color（注：此为-webkit-tap-highlights-color（注：此为-webkit-tap-highlights-color（注：此为-webkit-tap-highlights-color（注：此为-webkit-tap-highlight-color-webkit-tap-highlight-color -webkit-tap-highlights-color (Note: This is -webkit-tap-highlights-color (Note: This is -webkit-tap-highlights-color (Note: This is -webkit-tap-highlights-color (Note: This is -webkit-tap-highlights-color (Note: This is -webkit-tap-highlights-color (Note: This is -webkit-tap-highlights-color (Note: This is -webkit-tap-highlights-color (Note: This is -webkit-tap-highlights-color (Note: This is -webkit-tap-highlights-color (Note: This is CSS 属性，用于设置触摸设备上 CSS 属性，用于设置触摸设备上 CSS 属性，用于设置触摸设备上 CSS 属性，用于设置触摸设备上 CSS 属性，用于设置触摸设备上: transparent   透明的   透明的   透明的   透明的   透明的   透明的   透明的   透明的   透明的   透明的   透明的;
         }
 
-        body {
-            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            overflow-x: hidden;
+           身体{body   身体   身体   身体   身体   身体   身体   身体   身体   身体   身体   身体 {
+            font-family   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型   字体类型: 'Segoe UI'   “Segoe UI”   “Segoe UI”   “Segoe   “ Segoe UI”   UI”   UI”   “Segoe   “ Segoe   “ Segoe UI”   UI”   UI”   “Segoe   “ Segoe   “ Segoe UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   “Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   “Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   “Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   “Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   “Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   “Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   “Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”, 'Microsoft YaHei'   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”, sans-serif;
+            background   背景   背景   背景   背景   背景   背景   背景   背景   背景   背景   背景   背景: linear-gradient   线性渐变   线性渐变   线性渐变   线性渐变   线性渐变   线性渐变   线性渐变(   线性渐变135deg, #1a1a2e 0%, #16213e 100%);
+            color   颜色   颜色   颜色   颜色   颜色   颜色   颜色: #fff;               颜色颜色颜色颜色颜色
+               最小高度:100 vh;min-height   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度: 100vh;
+               显示:flex;display   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示: flex;
+               居中对齐；justify-content   Centered alignment   对齐; justify-content   Centered   为中心的 alignment   对齐   对齐; justify-content   Centered   为中心的   为中心的 alignment   对齐   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐   对齐; justify-content: center   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心;
+               对齐项目:中心;align-items   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目: center   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心;
+               填充:20 px;padding   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充: 20px;
+            overflow-x: hidden   隐藏的   隐藏的   隐藏的   隐藏的   隐藏的   隐藏的   隐藏的   隐藏的   隐藏的   隐藏的   隐藏的;
         }
 
         .game-container {
             max-width: 1200px;
-            width: 100%;
-            background: rgba(30, 30, 46, 0.9);
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            width   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度: 100%;
+            background   背景   背景   背景   背景   背景   背景   背景   背景   背景   背景   背景   背景: rgba(30, 30, 46, 0.9);
+            border-radius   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性: 20px;
+            padding   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充: 25px;
+            box-shadow   不必   不必   不必   不必   不必   不必   不必: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border   边境   边境   边境   边境   边境   边境: 1px   边境 solid   固体   固体   固体   固体   固体   固体   固体 rgba(255, 255, 255, 0.1);
         }
 
         /* 标题区 */
