@@ -1,0 +1,680 @@
+<!DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>   < !DOCTYPE html>
+<      超文本标记语言< css长= " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN"   " zh-CN" >html lang="zh-CN">
+<   <   头 head   头   头   头   头   头   头   头   头   头   头   头   头   头   头   头   头   头>head>
+       <   元   元   元meta   元   元 charset   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集="UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"><   元   元   元meta   元   元 charset   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集   字符集="UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8"   "UTF-8">
+    <   元   元   元meta   元 name   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字="viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport" content="width=device-width, initial-scale=1.0"><   元   元   元meta   元   元 name   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字   名字="viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport"   "viewport" content="width=device-width, initial-scale=1.0">
+       < title   标题   标题   标题   标题   标题   标题   标题   标题   标题   标题   标题   标题   标题   标题   标题   标题   标题> Minute countdown tool /title><   标题   标题   标题title   标题   标题>分钟倒计时工具</   & lt;title>
+       < style   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格>   风格   风格   风格<style   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格   风格>
+        /* 基础样式重置 */
+        * {
+               保证金:0;margin   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金   保证金: 0;
+               填充:0;padding   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充: 0;
+               盒模型尺寸计算方式：内容、内边距和边框的总和决定元素的尺寸box-sizing: border-box;
+            字体族：-apple-system   字体类型, BlinkMacSystemFont，   BlinkMacSystemFont,   BlinkMacSystemFont,   BlinkMacSystemFont,   BlinkMacSystemFont,   BlinkMacSystemFont,   BlinkMacSystemFont,   BlinkMacSystemFont,   BlinkMacSystemFont,   BlinkMacSystemFont,   BlinkMacSystemFont, 'Segoe UI'   “Segoe UI”   “Segoe   “ Segoe UI”   UI”   “Segoe   “ Segoe UI”   UI”   “Segoe   “ Segoe UI”   UI”   “Segoe   “ Segoe UI”   UI”   “Segoe   “ Segoe   “ Segoe UI”   UI”   “Segoe   “ Segoe UI”   UI”   “Segoe   “ Segoe UI”   UI”   “Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe   “ Segoe UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”, 'PingFang SC'   “巴航SC”   “巴航SC”， 'Microsoft YaHei'   “微软YaHei”   “微软YaHei”   “微软YaHei”， 无衬线；font-family: -apple-system   苹果系统   苹果系统, BlinkMacSystemFont, 'Segoe UI'   “Segoe UI”   “Segoe UI”   “Segoe   “ Segoe   “ Segoe   “ Segoe UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”, 'PingFang SC'   “巴航SC”, 'Microsoft YaHei'   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”   “微软YaHei”, sans-serif;
+        }
+
+           身体{body   身体   身体   身体   身体   身体   身体   身体   身体   身体   身体   身体   身体   身体   身体   身体   身体   身体   身体 {
+            背景颜色：#f8f9fa；background-color   f8f9fa； 背景颜色   f8f9fa；   f8f9fa; 背景颜色   f8f9fa；   f8f9fa; 背景颜色   f8f9fa；   f8f9fa; 背景颜色   f8f9fa；   f8f9fa; 背景颜色   f8f9fa；   f8f9fa; 背景颜色   f8f9fa；   f8f9fa; 背景颜色   f8f9fa；   f8f9fa; 背景颜色   f8f9fa；   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa; 背景颜色   f8f9fa；   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa; 背景颜色   f8f9fa；   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa; 背景颜色   f8f9fa；   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa; 背景颜色   f8f9fa；   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa; 背景颜色   f8f9fa；   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa; 背景颜色   f8f9fa；   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa; 背景颜色   f8f9fa；   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa;   f8f9fa; 背景颜色: #f8f9fa;
+               最小高度   最小高度   最小高度:100 vh;min-height   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度   最小高度: 100vh;
+               显示:flex;display   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示   显示: flex;
+               flex-direction: column；   列;   列;   列;   列;   列;   列;   列;   列;   列;  翻译为中文：主轴方向：列。flex-directionMainMainMainMainMainMainMain axis   轴 direction   方向   方向: column   列. flex-directionMain axis   轴 direction   方向   方向: column   列. flex-directionMain axis   轴 direction   方向   方向: column   列. flex-directionMain axis   轴 direction   方向   方向: column   列. flex-directionMain axis   轴 direction   方向   方向: column   列. flex-directionMain axis   轴   轴   轴   轴   轴 direction   方向   方向   方向   方向   方向   方向: column   列   列   列   列   列. flex-directionMain axis   轴   轴   轴   轴   轴   轴   轴   轴   轴   轴   轴   轴   轴   轴   轴   轴 direction   方向   方向   方向   方向   方向   方向   方向   方向   方向   方向   方向   方向   方向   方向   方向   方向   方向: column   列   列   列   列   列   列   列   列   列   列   列   列   列   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   UI”   列   列   列   列. flex-direction: column   列   列   列   列   列   列   列   列   列   列   列   列   列   列   列   列   列   列   列   列   列;
+               对齐项目:中心;align-items   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目   对齐项目: center   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心;
+               居中对齐；justify-content   Centered alignment   对齐; justify-content   Centered   为中心的 alignment   对齐   对齐; justify-content   Centered   为中心的 alignment   对齐   对齐; justify-content   Centered   为中心的 alignment   对齐   对齐; justify-content   Centered   为中心的 alignment   对齐   对齐; justify-content   Centered   为中心的 alignment   对齐   对齐; justify-content   Centered   为中心的 alignment   对齐   对齐; justify-content   Centered   为中心的 alignment   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐; justify-content   Centered   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的   为中心的 alignment   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐   对齐; justify-content: center   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心;
+               填充:20 px;padding   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充: 20px;
+               颜色:# 333;color   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色   颜色: #333;
+        }
+
+        .container   容器   容器   容器   容器   容器   容器   容器   容器   容器   容器   容器   容器   容器   容器   容器   容器 {
+            width   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度   宽度: 100%;
+            max-width: 500px;
+            text-align: center   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心   中心;
+            background-color   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色   背景颜色: white   白色   白色   白色   白色   白色   白色   白色   白色   白色   白色   白色   白色   白色   白色   白色   白色   白色;
+            border-radius   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性   这个特性: 16px;
+            box-shadow   不必   不必   不必   不必   不必   不必   不必   不必   不必   不必   不必   不必   不必   不必   不必   不必   不必   不必: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充   填充: 40px   填充 30px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .description {
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            line-height: 1.5;
+            font-size: 1rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .input-wrapper {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #34495e;
+            font-size: 1rem;
+        }
+
+        #minutesInput {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.4rem;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #fcfcfc;
+            color: #2c3e50;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        #minutesInput:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+        }
+
+        #minutesInput::placeholder {
+            color: #bdc3c7;
+        }
+
+        .input-hint {
+            font-size: 0.85rem;
+            color: #95a5a6;
+            margin-top: 8px;
+        }
+
+        #startBtn {
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.25);
+            letter-spacing: 0.5px;
+        }
+
+        #startBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(52, 152, 219, 0.35);
+        }
+
+        #startBtn:active {
+            transform: translateY(0);
+        }
+
+        #startBtn:disabled {
+            background: linear-gradient(135deg, #bdc3c7, #95a5a6);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .timer-container {
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #f8fafc;
+            border-radius: 16px;
+            border: 2px dashed #e0e0e0;
+        }
+
+        .timer-label {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        #timerDisplay {
+            font-size: 5.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            font-variant-numeric: tabular-nums;
+            line-height: 1;
+            margin: 10px 0;
+        }
+
+        .timer-unit {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .control-btn {
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        #pauseBtn {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        #resetBtn {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            color: #95a5a6;
+            font-size: 0.85rem;
+            text-align: center;
+            max-width: 500px;
+            line-height: 1.5;
+        }
+
+        /* 竖排文字样式 */
+        .vertical-text-left,
+        .vertical-text-right {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 5px;
+            z-index: 999;
+            opacity: 0.85;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            pointer-events: none; /* 防止干扰点击 */
+        }
+
+        .vertical-text-left {
+            left: 20px;
+            color: #3498db; /* 蓝色 */
+        }
+
+        .vertical-text-right {
+            right: 20px;
+            color: #e74c3c; /* 红色 */
+        }
+
+        /* 响应式调整竖排文字 */
+        @media (max-width: 1024px) {
+            .vertical-text-left,
+            .vertical-text-right {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .vertical-text-left,
+            .vertical-text-right {
+                font-size: 2.2rem;
+                opacity: 0.7;
+            }
+
+            .vertical-text-left {
+                left: 10px;
+            }
+
+            .vertical-text-right {
+                right: 10px;
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            #timerDisplay {
+                font-size: 4.5rem;
+            }
+
+            .input-group {
+                gap: 15px;
+            }
+
+            #minutesInput {
+                padding: 14px;
+                font-size: 1.2rem;
+            }
+
+            #startBtn {
+                padding: 16px 32px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 竖排装饰文字 -->
+    <div class="vertical-text-left">吴小帅</div>
+    <div class="vertical-text-right">王小美</div>
+
+    <div class="container">
+        <h1>⏱️ 分钟倒计时</h1>
+
+        <p class="description">
+            设置一个0-60分钟的倒计时，时间归零时会有提醒和提示音。
+        </p>
+
+        <div class="input-group">
+            <div class="input-wrapper">
+                <label for="minutesInput" class="input-label">设置分钟数</label>
+                <input
+                    type="number"
+                    id="minutesInput"
+                    placeholder="0-60"
+                    min="0"
+                    max="60"
+                    step="1"
+                    value="5"
+                >
+                <div class="input-hint">请输入0到60之间的整数</div>
+            </div>
+
+            <button id="startBtn">开始倒计时</button>
+        </div>
+
+        <div class="timer-container">
+            <div class="timer-label">剩余时间</div>
+            <div id="timerDisplay">05:00</div>
+            <div class="timer-unit">分钟 : 秒钟</div>
+        </div>
+
+        <div class="controls">
+            <button id="pauseBtn" class="control-btn" disabled>暂停</button>
+            <button id="resetBtn" class="control-btn" disabled>重置</button>
+        </div>
+    </div>
+
+    <p class="footer-note">
+        提示：开始倒计时后，时间归零时会弹出浏览器提醒并播放提示音。
+    </p>
+
+    <script>
+        // DOM元素
+        const minutesInput = document.getElementById('minutesInput');
+        const startBtn = document.getElementById('startBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const timerDisplay = document.getElementById('timerDisplay');
+
+        // 倒计时变量
+        let totalSeconds = 0;
+        let remainingSeconds = 0;
+        let countdownInterval = null;
+        let isRunning = false;
+        let isPaused = false;
+
+        // 音频上下文和提示音（使用Web Audio API生成简单提示音）
+        let audioContext = null;
+        let beepBuffer = null;
+        let audioInitialized = false;
+
+        // 初始化提示音
+        function initBeep() {
+            if (audioInitialized) return;
+
+            try {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                createBeepSound();
+                audioInitialized = true;
+            } catch (e) {
+                console.log('音频初始化失败，将使用浏览器通知代替声音:', e);
+            }
+        }
+
+        // 创建简单的提示音
+        function createBeepSound() {
+            if (!audioContext) return;
+
+            const duration = 0.5; // 持续时间（秒）
+            const sampleRate = audioContext.sampleRate;
+            const frameCount = duration * sampleRate;
+
+            const buffer = audioContext.createBuffer(1, frameCount, sampleRate);
+            const channelData = buffer.getChannelData(0);
+
+            // 生成正弦波
+            for (let i = 0; i < frameCount; i++) {
+                const time = i / sampleRate;
+                // 880Hz频率（A5音）
+                channelData[i] = 0.5 * Math.sin(2 * Math.PI * 880 * time);
+                // 淡出
+                if (i > frameCount * 0.8) {
+                    channelData[i] *= (frameCount - i) / (frameCount * 0.2);
+                }
+            }
+
+            beepBuffer = buffer;
+        }
+
+        // 播放提示音
+        function playBeep() {
+            // 尝试初始化音频（如果尚未初始化）
+            if (!audioInitialized) {
+                initBeep();
+            }
+
+            if (!audioContext || !beepBuffer) {
+                // 如果音频API不可用，尝试使用HTML5 Audio
+                try {
+                    const audio = new Audio();
+                    audio.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==';
+                    audio.play().catch(e => console.log('音频播放失败:', e));
+                } catch (e) {
+                    console.log('备用音频播放失败');
+                }
+                return;
+            }
+
+            try {
+                const source = audioContext.createBufferSource();
+                source.buffer = beepBuffer;
+                source.connect(audioContext.destination);
+                source.start();
+            } catch (e) {
+                console.log('播放提示音失败:', e);
+            }
+        }
+
+        // 更新显示
+        function updateDisplay(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            timerDisplay.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+
+            // 根据剩余时间改变颜色
+            if (seconds <= 10) {
+                timerDisplay.style.color = '#e74c3c'; // 红色
+            } else if (seconds <= 30) {
+                timerDisplay.style.color = '#f39c12'; // 橙色
+            } else {
+                timerDisplay.style.color = '#2c3e50'; // 深蓝色
+            }
+        }
+
+        // 验证输入（只允许0-60的整数）
+        function validateInput() {
+            let value = minutesInput.value.trim();
+
+            // 移除非数字字符
+            value = value.replace(/[^\d]/g, '');
+
+            // 转换为整数
+            let intValue = parseInt(value || '0');
+
+            // 处理NaN
+            if (isNaN(intValue)) {
+                intValue = 0;
+            }
+
+            // 确保在0-60范围内
+            if (intValue < 0) {
+                intValue = 0;
+            } else if (intValue > 60) {
+                intValue = 60;
+            }
+
+            // 更新输入框显示
+            minutesInput.value = intValue;
+            return intValue;
+        }
+
+        // 开始倒计时
+        function startCountdown() {
+            if (isRunning && !isPaused) return;
+
+            if (!isRunning) {
+                const minutes = validateInput();
+                totalSeconds = minutes * 60;
+                remainingSeconds = totalSeconds;
+
+                if (totalSeconds <= 0) {
+                    alert('请输入大于0的分钟数！');
+                    return;
+                }
+
+                isRunning = true;
+                startBtn.disabled = true;
+                pauseBtn.disabled = false;
+                resetBtn.disabled = false;
+                minutesInput.disabled = true;
+                startBtn.textContent = '倒计时中...';
+            }
+
+            if (isPaused) {
+                isPaused = false;
+                pauseBtn.textContent = '暂停';
+            }
+
+            // 清除可能存在的现有计时器
+            if (countdownInterval) {
+                clearInterval(countdownInterval);
+            }
+
+            // 开始新计时器
+            countdownInterval = setInterval(() => {
+                remainingSeconds--;
+
+                updateDisplay(remainingSeconds);
+
+                if (remainingSeconds <= 0) {
+                    clearInterval(countdownInterval);
+                    countdownComplete();
+                }
+            }, 1000);
+        }
+
+        // 暂停/继续倒计时
+        function togglePause() {
+            if (!isRunning) return;
+
+            if (isPaused) {
+                // 继续
+                isPaused = false;
+                pauseBtn.textContent = '暂停';
+                startCountdown(); // 重新开始计时器
+            } else {
+                // 暂停
+                isPaused = true;
+                pauseBtn.textContent = '继续';
+                clearInterval(countdownInterval);
+            }
+        }
+
+        // 重置倒计时
+        function resetCountdown() {
+            clearInterval(countdownInterval);
+            countdownInterval = null;
+
+            isRunning = false;
+            isPaused = false;
+
+            const minutes = validateInput();
+            totalSeconds = minutes * 60;
+            remainingSeconds = totalSeconds;
+
+            updateDisplay(remainingSeconds);
+
+            startBtn.disabled = false;
+            pauseBtn.disabled = true;
+            resetBtn.disabled = true;
+            minutesInput.disabled = false;
+            startBtn.textContent = '开始倒计时';
+            pauseBtn.textContent = '暂停';
+
+            timerDisplay.style.color = '#2c3e50';
+        }
+
+        // 倒计时完成
+        function countdownComplete() {
+            isRunning = false;
+            isPaused = false;
+
+            // 播放提示音
+            playBeep();
+
+            // 时间显示闪烁效果
+            const originalColor = window.getComputedStyle(timerDisplay).color;
+            let flashCount = 0;
+            const maxFlashes = 6;
+            const flashInterval = setInterval(() => {
+                timerDisplay.style.color = flashCount % 2 === 0 ? '#e74c3c' : originalColor;
+                flashCount++;
+                if (flashCount >= maxFlashes) {
+                    clearInterval(flashInterval);
+                    timerDisplay.style.color = originalColor;
+                }
+            }, 300);
+
+            // 显示浏览器通知
+            if ('Notification' in window && Notification.permission === 'granted') {
+                new Notification('⏰ 时间到！', {
+                    body: '设置的倒计时时间已结束。',
+                    icon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzM0OThkYiIvPjxwYXRoIGQ9Ik00Mi42NjY3IDQyLjY2NjdMMzEuMzMzNCAzMS4zMzM0TTMxLjMzMzQgNDIuNjY2N1YyNC44ODg5SDQyLjY2NjdNMzEuMzMzNCAyNC44ODg5SDQyLjY2NjciIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+'
+                });
+            } else if ('Notification' in window && Notification.permission === 'default') {
+                // 请求通知权限
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        new Notification('⏰ 时间到！', {
+                            body: '设置的倒计时时间已结束。'
+                        });
+                    }
+                });
+            }
+
+            // 显示警告框
+            alert('⏰ 时间到！倒计时已结束。');
+
+            // 重置按钮状态
+            startBtn.disabled = false;
+            startBtn.textContent = '重新开始';
+            pauseBtn.disabled = true;
+            resetBtn.disabled = false;
+            minutesInput.disabled = false;
+        }
+
+        // 输入事件监听
+        minutesInput.addEventListener('input', () => {
+            const minutes = validateInput(); // 验证并获取有效值
+
+            if (!isRunning) {
+                totalSeconds = minutes * 60;
+                remainingSeconds = totalSeconds;
+                updateDisplay(remainingSeconds);
+            }
+        });
+
+        minutesInput.addEventListener('change', validateInput);
+
+        // 获得焦点时选择所有文本
+        minutesInput.addEventListener('focus', () => {
+            minutesInput.select();
+        });
+
+        // 限制只能输入数字
+        minutesInput.addEventListener('keydown', (e) => {
+            // 允许控制键：退格、删除、制表符、箭头等
+            if (e.key === 'Backspace' || e.key === 'Delete' ||
+                e.key === 'Tab' || e.key === 'ArrowLeft' ||
+                e.key === 'ArrowRight' || e.key === 'ArrowUp' ||
+                e.key === 'ArrowDown' || e.key === 'Home' ||
+                e.key === 'End') {
+                return;
+            }
+
+            // 允许Ctrl+A、Ctrl+C、Ctrl+V等
+            if (e.ctrlKey || e.metaKey) {
+                return;
+            }
+
+            // 只允许数字
+            if (!/^\d$/.test(e.key)) {
+                e.preventDefault();
+            }
+        });
+
+        // 按钮事件监听
+        startBtn.addEventListener('click', startCountdown);
+        pauseBtn.addEventListener('click', togglePause);
+        resetBtn.addEventListener('click', resetCountdown);
+
+        // 允许按Enter键开始
+        minutesInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                startCountdown();
+            }
+        });
+
+        // 初始化
+        function init() {
+            // 初始化显示
+            const initialMinutes = validateInput();
+            totalSeconds = initialMinutes * 60;
+            remainingSeconds = totalSeconds;
+            updateDisplay(remainingSeconds);
+
+            // 请求通知权限（静默请求）
+            if ('Notification' in window && Notification.permission === 'default') {
+                // 不立即请求，等用户开始倒计时再请求
+                console.log('通知权限可用，将在需要时请求');
+            }
+
+            // 添加页面可见性变化监听
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden && isRunning && !isPaused) {
+                    // 页面隐藏时暂停倒计时
+                    if (countdownInterval) {
+                        clearInterval(countdownInterval);
+                        isPaused = true;
+                        pauseBtn.textContent = '继续';
+                    }
+                }
+            });
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
